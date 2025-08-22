@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BYBYN</title>
+    <link rel="stylesheet" href="../src/styles/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  </head>
+  <body>
+    <!--- ========== BYBN Header ========== -->
+    <header class="brand">
+      <h1 class="header-title01">BYBYN</h1>
+      <h2 class="header-title02">ᜊᜌ᜔ᜊᜌᜈ᜔</h2>
+    </header>
+    <!-- ========== Home View ========== -->
+    <section id="home-view" data-view>
+      <main class="content-wrapper layout-container" id="layoutContainer">
+        <!-- ========== Top Card (Tagalog) ========== -->
+        <section class="tagalog-card">
+          <div class="tagalog-header">
+            <div class="tagalog-title" id="tagalogTitle">Tagalog</div>
+          </div>
+          <p class="tagalog-text" id="editableBox" contenteditable="true"></p>
+          <!-- ========== Swap Transcription Formats ========== -->
+          <button class="translator-button" onclick="switchFormats()" aria-label="Switch formats">
+              <i class="fas fa-exchange-alt"></i>
+          </button>
+          <!-- ========== Download Content ========== -->
+          <button class="download-button" aria-label="Download text and translation">
+            <i class="fas fa-download"></i>
+          </button>
+        </section>
+        <!-- ========== Bottom Card (Baybayin) ========== -->
+        <section class="baybayin-card">
+          <div class="baybayin-header">
+            <div class="baybayin-title" id="baybayinTitle">Krus-Kudlit</div>
+            <!-- ========== Swap Krus-Kudlit/Pampudpod ========== -->
+            <button class="change-button" aria-label="Toggle Baybayin mode">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+          <div class="baybayin-text" id="outputBox" contenteditable="false"></div>  
+        </section>
+      </main>
+    </section>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

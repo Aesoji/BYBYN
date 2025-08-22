@@ -1,0 +1,335 @@
+/* ===== Fonts ===== */
+@font-face { font-family: 'Noto Sans Tagalog'; src: url(fonts/NotoSansTagalog.ttf); }
+@font-face { font-family: 'Newake'; src: url(fonts/Newake.otf); }
+@font-face { font-family: 'GTVC-Medium'; src: url(fonts/GTVCS-Medium.otf); }
+@font-face { font-family: 'GTVC-Book'; src: url(fonts/GTVCS-Book.otf); }
+@font-face { font-family: 'Pamupod'; src: url(fonts/PamudpodTakipsilimn.otf); }
+
+/* ===== Theme Colours ===== */
+:root {
+  --brand-red: #8b0000;
+  --brand-dark: #3B0918;
+  --brand-cream: #FFF3D9;
+  --brand-beige: #DDD2B9;
+  --background-main: #DC4731;
+}
+
+/* ===== Global ===== */
+html, body { 
+  height: 100vh; 
+  margin: 0; 
+}
+
+body { 
+  background: var(--background-main); 
+  overflow-x: auto;
+  overflow-y: hidden;
+ } 
+
+.container { 
+  max-width: 80%; 
+  margin: 4% auto; 
+}
+
+.hidden { 
+  opacity: 0; 
+  pointer-events: none; 
+  display: none !important; 
+}
+
+.tagalog-card, .baybayin-card, .translator-mode { 
+  transition: opacity 0.5s ease;
+ }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important; 
+  height: 1px !important;
+  padding: 0 !important; 
+  margin: -1px !important;
+  overflow: hidden !important; 
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important; 
+  border: 0 !important;
+}
+
+[contenteditable]:focus { outline: none; }
+
+/* ===== Brand Header ===== */
+.header-title01 {
+  position: fixed; 
+  top: 0; 
+  bottom: 0; 
+  left: 5px;
+  margin: 50px; 
+  color: var(--brand-cream);
+  text-shadow: 3px 3px 5px rgba(54,54,54,.5);
+  letter-spacing: 5px; 
+  font-weight: 700; 
+  font-size: 80px; 
+  font-stretch: expanded;
+  font-family: 'Newake'; 
+  white-space: nowrap;
+  overflow: hidden; 
+}
+
+.header-title02 {
+  position: fixed; 
+  top: 0; 
+  bottom: 0; 
+  left: 280px;
+  margin: 54px; 
+  color: var(--brand-cream);
+  text-shadow: 3px 3px 5px rgba(54,54,54,.5);
+  letter-spacing: 4px; 
+  font-size: 55px; 
+  font-stretch: expanded;
+  font-family: 'Noto Sans Tagalog';
+  overflow: hidden; 
+  white-space: nowrap;
+
+}
+
+/* ===== Top Card (Tagalog) ===== */
+.tagalog-card {
+  background: var(--brand-cream); 
+  padding: 90px; 
+  border-radius: 10px; 
+  min-height: 100px;
+  margin: 150px 0 0 45px; 
+  box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+  position: relative; 
+  width: 70%;
+}
+
+.tagalog-header {
+  display: inline-flex; 
+  align-items: center; 
+  background: var(--brand-cream); 
+  box-shadow: 0 5px 5px rgba(0,0,0,.2); 
+  border-radius: 10px; 
+  padding: 5px 8px;
+  position: absolute; 
+  top: -15px; 
+  left: 0; 
+  z-index: 10;
+}
+
+.tagalog-title {
+  color: var(--brand-dark);
+  font-weight: 700; 
+  font-size: 25px;
+  font-family: 'GTVC-Medium', sans-serif; 
+  background: transparent; 
+  margin-right: 10px;
+}
+
+.tagalog-text {
+  color: var(--brand-dark);
+  font-size: 20px; 
+  font-stretch: expanded; 
+  font-family: 'GTVC-Book', sans-serif;
+  word-wrap: break-word; 
+  padding: 15px 20px 0; 
+  width: 95%; 
+  line-height: 2;
+  display: inline-block; 
+  position: absolute; 
+  top: 10px; 
+  left: 0; 
+  max-height: 80%; 
+  overflow-y: auto;
+}
+
+/* ===== Swap Transcriptions Button ===== */
+.translator-button {
+  position: absolute; 
+  top: -20px; 
+  right: -20px;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  border: none;
+  background: var(--brand-red);
+  color: var(--brand-cream);          
+  font-size: 2rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  text-decoration: none; 
+  cursor: pointer; 
+  box-shadow: 0 6px 6px rgba(0,0,0,.2); 
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.translator-button:hover {
+  background: var(--brand-dark);    
+  animation: pulse 1s infinite;
+}
+
+.translator-button i {
+  transition: transform 0.3s ease;
+}
+
+.translator-button.rotated i {
+  transform: rotate(180deg);
+}
+
+/* ===== Download Button ===== */
+.download-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  top: auto;              
+  left: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: var(--brand-red);
+  color: var(--brand-cream);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 6px rgba(0,0,0,.2);
+  z-index: 1000;
+  transition: background-color .3s ease;
+}
+
+.download-button:hover {
+  background: var(--brand-dark);
+  animation: pulse 1s infinite;
+}
+
+/* ===== Bottom Card (Baybayin) ===== */
+.baybayin-card {
+  background: var(--brand-beige);
+  padding: 90px;
+  border-radius: 10px;
+  width: 70%;
+  margin: -15px 0 0 45px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+  position: relative;
+}
+
+.baybayin-header {
+  display: inline-flex;
+  align-items: center;
+  background: var(--brand-beige);
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+  border-radius: 10px;
+  padding: 5px 8px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  z-index: 10;
+  gap: 8px;
+}
+
+.baybayin-title {
+  color: var(--brand-dark);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'GTVC-Medium', sans-serif;
+  line-height: 1;
+  margin: 0;
+}
+
+.change-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--brand-dark);
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 rgba(0,0,0,0); 
+}
+.change-button:hover {
+  background: rgba(59, 9, 24, 0.08);     
+}
+.change-button i { 
+  pointer-events: none; 
+}
+
+.change-button i {
+  transition: transform 0.3s ease;
+}
+
+.change-button.rotated i {
+  transform: rotate(180deg);
+}
+
+.baybayin-text {
+  color: #3B0918;
+  font-size: 20px;
+  font-stretch: expanded;
+  font-family: 'GTVC-Book', sans-serif;
+  padding: 15px 10px 5px;
+  width: 97%;
+  line-height: 2;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  max-height: 75%;
+  overflow-y: auto;
+  display: inline-block;
+}
+
+.baybayin-panel[data-mode="pamupod"] {
+  font-family: "Baybayin Pamudpod", "Noto Sans Tagalog", system-ui, sans-serif;
+}
+
+.baybayin-panel[data-mode="krus-kudlit"] {
+  font-family: "Noto Sans Tagalog", system-ui, sans-serif;
+}
+
+.brand .header-title01 span {
+  display: inline-block;
+  will-change: transform;
+  transform: translateY(0);
+}
+
+/* ===== Animations ===== */
+@supports (bottom: env(safe-area-inset-bottom)) {
+  .download-button {
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    right:  calc(16px + env(safe-area-inset-right));
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .brand:hover .header-title01 span {
+    animation: wave-letter 700ms ease-out 1 both;
+    animation-delay: calc(var(--i, 0) * 60ms); 
+    animation: wave-letter 1200ms ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 120ms);
+  }
+}
+
+/* ===== Button Pulse Keyframes ===== */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.15); }
+  60%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* ===== Title Way Animation ===== */
+@keyframes wave-letter {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+/* ===== Title Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .brand .header-title01 span { animation: none !important; }
+}
+
