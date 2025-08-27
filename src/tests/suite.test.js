@@ -1,7 +1,7 @@
 // src/tests/suite.test.js
 
 // This file contains tests for the transcription and download functionality of the Baybayin app.
-// To test, use npm test in the terminal.
+// To test, type 'npm test' in the terminal.
 
 import { jest, describe, test, expect, beforeEach, afterEach } from '@jest/globals';
 import { toBaybayinWithMode, toLatin } from '../utils/transcription.js';
@@ -18,12 +18,12 @@ const translateToLatin = (s) => toLatin(s);
   TRANSLATION TESTS
   
   Verifies:
-   - Latin to Baybayin phrase handling
-   - Hyphen cleanup inside glyph runs
-   - Accent and punctuation mapping
-   - Exceptions and all-caps inputs
-   - Baybayin to Latin correctness
-   - Round-trip normalization
+  - Latin to Baybayin phrase handling
+  - Hyphen cleanup inside glyph runs
+  - Accent and punctuation mapping
+  - Exceptions and all-caps inputs
+  - Baybayin to Latin correctness
+  - Round-trip normalization
 ========================= 
 */
 
@@ -76,14 +76,14 @@ describe('Transcription runs between Latin and Baybayin', () => {
 
 /* 
 =========================
-   DOWNLOAD SMOKE TEST (jsdom)
+  DOWNLOAD TESTS (jsdom)
 
-   Verifies:
-   - DOM flow for exporting text
-   - Build export content from headings and boxes
-   - Create a Blob URL
-   - Create a temporary anchor, click, then remove
-   - Revoke the Blob URL on the next tick
+  Verifies:
+  - DOM flow for exporting text
+  - Build export content from headings and boxes
+  - Create a Blob URL
+  - Create a temporary anchor, click, then remove
+  - Revoke the Blob URL on the next tick
 ========================= 
 */
 
