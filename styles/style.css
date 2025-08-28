@@ -1,9 +1,9 @@
 /* ===== Fonts ===== */
-@font-face { font-family: 'Noto Sans Tagalog'; src: url(fonts/NotoSansTagalog.ttf); }
-@font-face { font-family: 'Newake'; src: url(fonts/Newake.otf); }
-@font-face { font-family: 'GTVC-Medium'; src: url(fonts/GTVCS-Medium.otf); }
-@font-face { font-family: 'GTVC-Book'; src: url(fonts/GTVCS-Book.otf); }
-@font-face { font-family: 'Pamupod'; src: url(fonts/PamudpodTakipsilimn.otf); }
+@font-face { font-family: 'Noto Sans Tagalog'; src: url('../public/fonts/NotoSansTagalog.ttf') format('truetype'); }
+@font-face { font-family: 'Newake';            src: url('../public/fonts/Newake.otf') format('opentype'); }
+@font-face { font-family: 'GTVC-Medium';       src: url('../public/fonts/GTVCS-Medium.otf') format('opentype'); }
+@font-face { font-family: 'GTVC-Book';         src: url('../public/fonts/GTVCS-Book.otf') format('opentype'); }
+@font-face { font-family: 'Pamupod';           src: url('../public/fonts/PamudpodTakipsilimn.otf') format('opentype'); }
 
 /* ===== Theme Colours ===== */
 :root {
@@ -24,6 +24,7 @@ body {
   background: var(--background-main); 
   overflow-x: auto;
   overflow-y: hidden;
+  font-family: 'Newake', sans-serif;
  } 
 
 .container { 
