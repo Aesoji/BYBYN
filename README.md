@@ -1,5 +1,5 @@
 # BYBN: A Tagalog to Baybayin Transcription Service
-##### Created and Designed by Aesoji.
+##### Created by Aesoji.
 
 *BYBN is a transcription service that converts Tagalog text in its Latin form into Baybayin, an ancient pre-colonial writing system from the Philippines. The project is in accordance with the modern Baybayin rules (B17). This project makes it easier for developers, educators, and language enthusiasts to experiment with Baybayin without the need to navigate between different online services. This transcription service offers dual transcription services between both scripts and can specialize in Krus-Kudlit and Pamudpod. Your current transcription results can also be downloaded as a text file (.txt) for future personal use. Enjoy!*
 
