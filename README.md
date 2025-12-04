@@ -19,6 +19,8 @@
 2. What is the difference between Krus-Kudlit and Pamudpod?
    - Krus-Kudlit is the officially recognized form of Baybayin (B17). Pamudpod is a variant that changes the killer accents' design to reflect more indigenous writings, with Krus-Kudlit being a reflection of colonialism's influence.
 
+*for the sake of commit*
+
 ---
 
 ### License
